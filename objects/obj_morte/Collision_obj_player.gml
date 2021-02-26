@@ -1,0 +1,1 @@
+other.estado = estados.morte
