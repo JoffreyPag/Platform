@@ -51,3 +51,8 @@ enum estados{
 }
 
 estado = estados.movendo
+
+//-----criando a camera
+if(!instance_exists(obj_camera)){
+	instance_create_layer(x,y,"camera",obj_camera)
+}

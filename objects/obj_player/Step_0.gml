@@ -68,7 +68,7 @@ switch(estado){
 						
 				var xx = random_range(x - sprite_width/2, x+sprite_width/2)
 		
-				instance_create_depth(xx,y,depth-1000,obj_vel)
+				instance_create_layer(xx,y,"particulas",obj_vel)
 			}
 		}
 		
@@ -106,7 +106,7 @@ switch(estado){
 				for(var i=0; i<irandom_range(4,10); i++){
 					var xx = random_range(x-sprite_width/2, x+sprite_width/2)
 		
-					instance_create_depth(xx,y,depth-1000,obj_vel)
+					instance_create_layer(xx,y,"particulas",obj_vel)
 				}
 			}
 		}
@@ -127,7 +127,7 @@ switch(estado){
 						var xx = x+onde*sprite_width/2
 						var yy = y + random_range(-sprite_height, 0)
 		
-						instance_create_depth(xx,y,depth-1000,obj_vel)
+						instance_create_layer(xx,y,"particulas",obj_vel)
 					}
 				}
 				
@@ -149,7 +149,7 @@ switch(estado){
 					var xx = x + sprite_width/2
 					var yy = y + random_range(-sprite_height, 0)
 		
-					instance_create_depth(xx,yy,depth-1000,obj_vel)
+					instance_create_layer(xx,yy,"particulas",obj_vel)
 				}
 				
 			}else if(ultima_parede and jump){
@@ -164,7 +164,7 @@ switch(estado){
 					var xx = x - sprite_width/2
 					var yy = y + random_range(-sprite_height, 0)
 		
-					instance_create_depth(xx,yy,depth-1000,obj_vel)
+					instance_create_layer(xx,yy,"particulas",obj_vel)
 				}
 			}
 		}else if(!chao){
@@ -184,7 +184,7 @@ switch(estado){
 						
 					var xx = random_range(x - sprite_width/2, x+sprite_width/2)
 		
-					instance_create_depth(xx,y,depth-1000,obj_vel)
+					instance_create_layer(xx,y,"particulas",obj_vel)
 				}
 		}
 		
@@ -256,7 +256,7 @@ switch(estado){
 		}
 		
 		//criando o rastro
-		var rastro = instance_create_layer(x,y, layer, obj_vestigio)
+		var rastro = instance_create_layer(x,y, "Player_rastro", obj_vestigio)
 		rastro.xscale = xscale
 		rastro.yscale = yscale
 		

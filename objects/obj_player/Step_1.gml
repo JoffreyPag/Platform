@@ -9,7 +9,7 @@ if(chao_temp and !chao){
 	for(var i=0; i<irandom_range(4,10); i++){
 		var xx = random_range(x-sprite_width/2, x+sprite_width)
 		
-		instance_create_depth(xx,y,depth-1000,obj_vel)
+		instance_create_layer(xx,y,"particulas",obj_vel)
 	}
 }
 
