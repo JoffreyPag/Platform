@@ -1,5 +1,4 @@
 {
-  "name": "tl_solidos",
   "spriteId": {
     "name": "spr_tiles",
     "path": "sprites/spr_tiles/spr_tiles.yy",
@@ -107,7 +106,7 @@
   },
   "macroPageTiles": {
     "SerialiseWidth": 12,
-    "SerialiseHeight": 5,
+    "SerialiseHeight": 7,
     "TileSerialiseData": [
       0,
       0,
@@ -169,6 +168,30 @@
       0,
       0,
       0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
     ],
   },
   "parent": {
@@ -176,6 +199,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "tl_solidos",
   "tags": [],
   "resourceType": "GMTileSet",
 }

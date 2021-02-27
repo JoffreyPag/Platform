@@ -76,10 +76,12 @@ switch(estado){
 		if(abs(velh) > 0 or abs(velv) > 0 or left or right or jump) estado = estados.movendo
 		
 		//dash
-		if(dash and carga > 0){ 
-			
-			dir = point_direction(0,0,(right-left), (down-up))
-			
+		if(dash and carga > 0){ if(right or up or left or down){
+				dir = point_direction(0,0,(right-left), (down-up))
+			}else{
+				//dando dash para a direçao que ta olhando
+				dir = point_direction(0,0,ver, 0)
+			}
 			estado = estados.dash;
 			carga--
 		}
@@ -220,14 +222,6 @@ switch(estado){
 		if(velh == 0 and velv == 0 and !left and !right and !jump) estado = estados.parado
 		//dash
 		if(dash and carga > 0){ 
-			/*if(up and right) dir = 45;
-			else if(up and left) dir = 135;
-			else if(down and left) dir = 225;
-			else if(down and right) dir = 315;
-			else if(right) dir = 0;
-			else if(up) dir = 90;
-			else if(left) dir = 180;
-			else if(down) dir = 270;*/
 			
 			dir = point_direction(0,0,(right-left), (down-up))
 			
