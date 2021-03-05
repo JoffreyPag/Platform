@@ -46,3 +46,12 @@ switch(estado){
 	default:
 		show_message("voce digitou o nome do estado errado!!!!")
 }
+
+if(pai != noone){
+	var col = instance_place(x,y, obj_plat)
+	if(col){
+		if(col.id != pai.id){
+			instance_destroy()
+		}
+	}
+}

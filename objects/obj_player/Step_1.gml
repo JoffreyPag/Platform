@@ -1,3 +1,10 @@
+
+if(iniciado){
+	velh = velh_inicial
+	velv = velv_inicial
+	iniciado = false
+}
+
 //checando se acabei de cair no chao
 var chao_temp = place_meeting(x,y+1,obj_plat)
 if(chao_temp and !chao){

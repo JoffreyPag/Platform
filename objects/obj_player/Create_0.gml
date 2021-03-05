@@ -8,8 +8,7 @@ deslize = 2
 
 //------- velocidade
 
-velh = 0
-velv= 0
+
 
 //-------Limite das velocidades
 max_velh = 6
@@ -27,6 +26,8 @@ dir = 0
 carga = 1
 ultima_parede = 0
 ver = 1
+criar_pedaco = true
+iniciado = true
 
 //controlando cor
 sat = 255
@@ -47,10 +48,13 @@ enum estados{
 	parado,
 	movendo,
 	dash,
-	morte
+	morte,
+	voltar
 }
 
 estado = estados.movendo
+
+lista = noone
 
 //-----criando a camera
 if(!instance_exists(obj_camera)){

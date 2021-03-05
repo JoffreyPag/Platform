@@ -37,7 +37,6 @@ dash = keyboard_check_pressed(ord("L"))
 mov_h = (right-left)*max_velh
 
 //valor da aceleracao
-show_debug_message(carga)
 if(chao){
 	acel = acel_chao
 	carga = 1
@@ -267,11 +266,35 @@ switch(estado){
 	break;
 	#endregion
 	
-	#region
+	#region morte
 	case estados.morte:
-		room_restart()
+		//explodindo o player
+		if(criar_pedaco){
+			for(var i=0; i<10; i++){
+				var p = instance_create_layer(x,y, layer, obj_pedaco)
+				p.speed = random_range(1,2)
+				p.direction = random(360)
+				p.image_angle = p.direction
+				p.image_xscale = random_range(.2,.6)
+				p.image_yscale = p.image_xscale
+				p.image_blend = make_color_hsv(20, sat, 255)
+				p.dest_x = xstart
+				p.dest_y = ystart
+				p.velh_inicial = velh_inicial
+				p.velv_inicial = velv_inicial
+				lista[i] = p.id
+				//if(i>=10) criar_pedaco = false
+			}
+			p.criador = true
+			p.lista = lista
+			criar_pedaco = false
+			obj_camera.alvo = p
+			instance_destroy()
+		}
 	break;
 	#endregion
+	case estados.voltar:
+	break;
 }
 
 switch(carga){
